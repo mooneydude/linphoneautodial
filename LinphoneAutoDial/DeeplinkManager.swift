@@ -23,10 +23,12 @@ class DeeplinkManager {
     }
     
     func manage(url: URL) -> DeeplinkTarget {
-        let urlStr:String? = url.absoluteString
         var phoneNumber: String!
+        var urlStr:String! = url.absoluteString
+        urlStr = urlStr.removingPercentEncoding // remove %20 from string
         if let urlStr {
-            phoneNumber = urlStr.filter("0123456789.".contains)
+            phoneNumber = urlStr.trimmingCharacters(in: .whitespacesAndNewlines) // remove whitespaces
+            phoneNumber = phoneNumber.filter("0123456789.".contains) // remove non-numerical characters
             let linphoneStr = "sip-linphone:" + phoneNumber + "@tampa1.voip.ms"
             let linphoneUrl = URL(string: linphoneStr)!
             UIApplication.shared.open(linphoneUrl)

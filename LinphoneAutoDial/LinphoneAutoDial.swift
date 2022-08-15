@@ -42,6 +42,11 @@ struct LinphoneAutoDial: App {
                     )
                 }
             }
+            .onOpenURL { url in
+                let deeplinkManager = DeeplinkManager()
+                let deeplink = deeplinkManager.manage(url: url)
+                self.deeplinkTarget = deeplink
+            }
         }
     }
 }
