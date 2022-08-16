@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  CreateWithSwift
+//  LinphoneAutoDial
 //
 //  Created by Paul Mooney on 8/11/22.
 //
@@ -10,7 +10,7 @@ import SwiftUI
 struct DetailView<Content: View>: View {
     var title: String
     var urlHost: String
-    var content: () -> Content // change to closure
+    var content: () -> Content
     
     // add all parameters in the init
     init(title: String, urlHost: String, @ViewBuilder content: @escaping () -> Content) {
@@ -32,6 +32,6 @@ struct DetailView<Content: View>: View {
 
 //struct DetailView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        DetailView()
+//        DetailView(title: "number.circle", urlHost: "5552345678", content: { })
 //    }
 //}

@@ -1,6 +1,6 @@
 //
 //  CreateWithSwiftApp.swift
-//  CreateWithSwift
+//  LinphoneAutoDial
 //
 //  Created by Paul Mooney on 8/11/22.
 //
@@ -9,6 +9,7 @@
 // https://www.createwithswift.com/creating-a-custom-app-launch-experience-in-swiftui-with-deep-linking/
 // https://cocoacasts.com/working-with-nsurlcomponents-in-swift
 
+// plist location to add & modify protocols
 // ~/Library/Preferences/com.apple.LaunchServices/com.apple.launchservices.secure.plist
 
 import SwiftUI

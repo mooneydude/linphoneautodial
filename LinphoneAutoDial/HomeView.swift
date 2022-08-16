@@ -1,6 +1,6 @@
 //
 //  HomeView.swift
-//  CreateWithSwift
+//  LinphoneAutoDial
 //
 //  Created by Paul Mooney on 8/11/22.
 //
@@ -10,7 +10,7 @@ import SwiftUI
 struct HomeView<Content: View>: View {
     var title: String
     var urlHost: String
-    var content: () -> Content // change to closure
+    var content: () -> Content
     
     // add all parameters in the init
     init(title: String, urlHost: String, @ViewBuilder content: @escaping () -> Content) {
@@ -28,7 +28,13 @@ struct HomeView<Content: View>: View {
         }
         // window frame size 
     }
-
 }
+
+//struct HomeView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        HomeView(title: "house", urlHost: "", content: { })
+//            .previewDevice("iPhone X")
+//    }
+//}
 
 
